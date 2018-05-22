@@ -1,6 +1,6 @@
 <?php
 
-namespace Airslamit\ProductsListing;
+namespace Airslamit\ProductsListing\Helper;
 
 use Magento\Framework\App\Helper\AbstractHelper;
 use Magento\Store\Model\ScopeInterface;

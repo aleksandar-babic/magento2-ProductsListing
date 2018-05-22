@@ -1,0 +1,27 @@
+<script>
+require([
+    'jquery',
+    'prototype',
+], function(jQuery){
+    function generate() {
+        params = {
+        };
+
+        new Ajax.Request('<?php echo $block->getAjaxUrl() ?>', {
+            loaderArea:     false,
+            asynchronous:   true,
+            parameters:     params,
+            onSuccess: function(transport) {
+                var response = JSON.parse(transport.responseText);
+            }
+        });
+    }
+
+    jQuery('#generate').click(function () {
+        console.log('clicked!');
+        generate();
+    });
+});
+</script>
+
+<?php echo $block->getButtonHtml() ?>
